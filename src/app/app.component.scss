@@ -1,0 +1,88 @@
+@import 'colors';
+
+%align-center{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    background-color: $dark-color;
+
+    .brand{
+        font-size: 2rem;
+        color: $light;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    div{
+        ul{
+            display: flex;
+            justify-content: flex-start;
+            li{
+                margin-left: 2rem;
+                margin-top: 1rem;
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: $light;
+                }
+            }
+        }
+        
+    }
+    .toggle-button{
+        position: absolute;
+        top: .75rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+
+        .bar{
+            height: 3px;
+            width: 100%;
+            background-color: $light;
+            border-radius:10px ;
+        }
+    }
+}
+@media (max-width:500px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        div{
+            width: 100%;
+        }
+        ul{
+            flex-direction: column;
+            background-color: $dark-color;
+        }
+        li{
+            display: inline-block;
+            color: $light;
+            margin: .2rem .5rem;
+            display: none;
+
+        }
+        li:hover{
+            background-color: $hover-color;
+        }
+
+        li.active{
+            display: flex;
+        }
+
+    }
+}

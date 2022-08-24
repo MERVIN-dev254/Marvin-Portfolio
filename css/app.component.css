@@ -1,0 +1,22 @@
+.navbar { display: flex; justify-content: space-between; height: 50px; width: 100%; background-color: black; }
+
+.navbar .brand { font-size: 2rem; color: #d1d6d4; margin-top: 10px; cursor: pointer; }
+
+.navbar div ul { display: flex; justify-content: flex-start; }
+
+.navbar div ul li { margin-left: 2rem; margin-top: 1rem; list-style: none; }
+
+.navbar div ul li a { text-decoration: none; color: #d1d6d4; }
+
+.navbar .toggle-button { position: absolute; top: .75rem; right: 1rem; display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; }
+
+.navbar .toggle-button .bar { height: 3px; width: 100%; background-color: #d1d6d4; border-radius: 10px; }
+
+@media (max-width: 500px) { .toggle-button { display: flex; }
+  .navbar { flex-direction: column; align-items: flex-start; width: 100%; }
+  .navbar div { width: 100%; }
+  .navbar ul { flex-direction: column; background-color: black; }
+  .navbar li { display: inline-block; color: #d1d6d4; margin: .2rem .5rem; display: none; }
+  .navbar li:hover { background-color: #383636; }
+  .navbar li.active { display: flex; } }
+/*# sourceMappingURL=app.component.css.map */
